@@ -1,31 +1,39 @@
+pipeline {
+    agent any
+    
+   stages
+{
+   stage('Checkout')
+{
+  steps
+{
+   git credentialsId: 'Ubuntu', url: 'git@github.com:PallaviVtalent/NewRepo.git'
+   git credentialsId: 'Linux', url: 'git@github.com:PallaviVtalent/NewRepo.git'
+}
+}
 
- pipeline
-{
-  agent any
-  {
-    stages
-{
-    stage('Preparation')
-     {
-          steps
-{
-             echo 'step1 .Hello world'
- }
+        stage('Build'){
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Test'){
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Run') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+    post{ always {echo 'I will always say hello again'}}
 }
- stage('Build')
-   {
-      steps
-{
-       echo 'step2 .second time Helllo'
-      
-}
-}
-stage(' Deploy')
-   {
-      steps
-{
- echo 'step 3.third time hello'
-}
-}
-}
-}
+
+
