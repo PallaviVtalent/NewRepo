@@ -17,9 +17,10 @@ pipeline {
                 echo 'Hello World'
             }
         }
-         node('Ubuntu24node'){
          stage('test') {
             steps {
+              node('Ubuntu24node'){
+                  
                 echo 'this is the test stage which runs on different node'
             }
         }
