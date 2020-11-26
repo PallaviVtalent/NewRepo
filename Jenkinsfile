@@ -1,6 +1,6 @@
 pipeline {
     agent {
-   label '24thlinuxnode' 'Ubuntu24node'
+   label 'Ubuntu24node'
     }
        
     stages
