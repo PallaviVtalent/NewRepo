@@ -1,6 +1,6 @@
 pipeline {
     agent {
-   label 'Ubuntu24node'
+   label '24thlinuxnode'
     }
        
     stages
@@ -15,7 +15,7 @@ pipeline {
 {
   steps
 {
-  sh "cd /home/ubuntu/workspace/Ubuntu24node/testing ; mvn clean install"
+  sh "cd /home/ubuntu/workspace/24thlinuxnode/testing@script ; mvn clean install"
 }
 }
   stage('Test')
