@@ -5,14 +5,14 @@
   {
     stages
 {
-    stage('First stage')
+    stage('Preparation')
      {
           steps
 {
              echo 'step1 .Hello world'
  }
 }
- stage('Second stage')
+ stage('Build')
    {
       steps
 {
@@ -20,7 +20,7 @@
       
 }
 }
-stage('Third stage')
+stage(' Deploy')
    {
       steps
 {
