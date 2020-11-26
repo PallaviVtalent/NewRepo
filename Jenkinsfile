@@ -11,24 +11,27 @@ pipeline {
                 checkout scm
         }
     }
-         stage('Build') {
+        
+        stage('Build') {
             steps {
                 echo 'Hello World'
             }
         }
+         node('Ubuntu24node'){
          stage('test') {
             steps {
-                echo 'Hello World'
+                echo 'this is the test stage which runs on different node'
             }
         }
+         }
          stage('Run') {
             steps {
-                echo 'Hello World'
+                echo 'This is the run the build stage'
             }
-        }
+         }
          stage('Deploy') {
             steps {
-                echo 'Hello World'
+                echo 'this is the deployment stage'
             }
         }
 
