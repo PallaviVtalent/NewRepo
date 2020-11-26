@@ -43,9 +43,7 @@ pipeline {
      {
           steps
 {
-    node ('24thlinuxnode') {
-          
-             echo 'Deploy.Hello world'
+              echo 'Deploy.Hello world'
  }
 }
     }
